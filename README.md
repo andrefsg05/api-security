@@ -377,8 +377,3 @@ pytest
 ```
 
 The test suite covers the vulnerable and secure GraphQL scenarios using an isolated SQLite database configured through `INSECURESHOP_DATABASE_URL`.
-
-## Authors
-
-André Gonçalves l58392  
-André Zhan l58762

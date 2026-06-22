@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | Encomendas</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="orders">
+    <header class="topbar">
+      <a class="brand" href="/static/dashboard.html">InsecureShop</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="/static/dashboard.html">Dashboard</a>
+        <a class="active" href="/static/orders.html">Encomendas</a>
+        <a href="/static/profile.html">Perfil</a>
+        <a href="/static/graphql-lab.html">GraphQL Lab</a>
+      </nav>
+      <button class="ghost-button" data-action="logout">Sair</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading compact">
+        <div>
+          <p class="eyebrow">Histórico</p>
+          <h1>Minhas encomendas</h1>
+          <p class="muted">Consulta estados, valores e moradas de entrega.</p>
+        </div>
+        <label class="search-box">
+          <span>Pesquisar</span>
+          <input id="order-search" type="search" placeholder="Produto ou estado">
+        </label>
+      </section>
+
+      <section class="table-card">
+        <div class="responsive-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Número</th>
+                <th>Produto</th>
+                <th>Estado</th>
+                <th>Valor</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="orders-table"></tbody>
+          </table>
+        </div>
+        <p id="orders-empty" class="empty-state" hidden>Não existem encomendas para apresentar.</p>
+      </section>
+    </main>
+  </body>
+</html>

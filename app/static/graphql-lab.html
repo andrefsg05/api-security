@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | GraphQL Lab</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="graphql-lab">
+    <header class="topbar">
+      <a class="brand" href="/static/dashboard.html">InsecureShop</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="/static/dashboard.html">Dashboard</a>
+        <a href="/static/orders.html">Encomendas</a>
+        <a href="/static/profile.html">Perfil</a>
+        <a class="active" href="/static/graphql-lab.html">GraphQL Lab</a>
+      </nav>
+      <button class="ghost-button" data-action="logout">Sair</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading compact">
+        <div>
+          <p class="eyebrow">API Security</p>
+          <h1>GraphQL Lab</h1>
+          <p class="muted">Compara resolvers vulneráveis e seguros usando a sessão atual.</p>
+        </div>
+      </section>
+
+      <section class="lab-layout">
+        <form id="graphql-form" class="lab-card">
+          <div class="lab-toolbar">
+            <label>
+              Endpoint
+              <select id="graphql-endpoint" name="endpoint">
+                <option value="vulnerable">Vulnerável</option>
+                <option value="secure">Seguro</option>
+              </select>
+            </label>
+            <label>
+              Cenário
+              <select id="graphql-scenario" name="scenario"></select>
+            </label>
+          </div>
+
+          <label>
+            Query
+            <textarea id="graphql-query" class="query-editor" spellcheck="false"></textarea>
+          </label>
+
+          <button type="submit" class="primary-button">Executar</button>
+          <p id="graphql-message" class="form-message" role="status"></p>
+        </form>
+
+        <section class="lab-card response-card" aria-label="Resposta GraphQL">
+          <div class="section-title">
+            <h2>Resposta</h2>
+            <span id="graphql-url" class="endpoint-chip">/graphql/vulnerable</span>
+          </div>
+          <pre id="graphql-response" class="response-panel">{}</pre>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

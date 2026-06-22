@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="login">
+    <main class="login-shell">
+      <section class="login-panel">
+        <div class="brand-mark">IS</div>
+        <h1>InsecureShop</h1>
+        <p class="muted">Acede à tua conta para acompanhar encomendas e dados de perfil.</p>
+
+        <form id="login-form" class="form-stack">
+          <label>
+            Email
+            <input id="email" name="email" type="email" autocomplete="username" required>
+          </label>
+          <label>
+            Password
+            <input id="password" name="password" type="password" autocomplete="current-password" required>
+          </label>
+          <button type="submit" class="primary-button">Entrar</button>
+          <p id="login-error" class="form-message error" role="alert"></p>
+        </form>
+
+        <div class="demo-note">
+          <strong>Conta demo</strong>
+          <span>andre@example.com</span>
+          <span>password123</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

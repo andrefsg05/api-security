@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | Perfil</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="profile">
+    <header class="topbar">
+      <a class="brand" href="/static/dashboard.html">InsecureShop</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="/static/dashboard.html">Dashboard</a>
+        <a href="/static/orders.html">Encomendas</a>
+        <a class="active" href="/static/profile.html">Perfil</a>
+        <a href="/static/graphql-lab.html">GraphQL Lab</a>
+      </nav>
+      <button class="ghost-button" data-action="logout">Sair</button>
+    </header>
+
+    <main class="page-shell narrow">
+      <section class="page-heading compact">
+        <div>
+          <p class="eyebrow">Conta</p>
+          <h1>Perfil</h1>
+          <p class="muted">Mantém os teus dados principais atualizados.</p>
+        </div>
+      </section>
+
+      <section class="form-card">
+        <form id="profile-form" class="form-stack">
+          <label>
+            Nome
+            <input id="profile-name" name="name" type="text" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input id="profile-email" name="email" type="email" autocomplete="email" required>
+          </label>
+          <button type="submit" class="primary-button">Guardar alterações</button>
+          <p id="profile-message" class="form-message" role="status"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

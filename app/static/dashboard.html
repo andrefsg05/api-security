@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="dashboard">
+    <header class="topbar">
+      <a class="brand" href="/static/dashboard.html">InsecureShop</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a class="active" href="/static/dashboard.html">Dashboard</a>
+        <a href="/static/orders.html">Encomendas</a>
+        <a href="/static/profile.html">Perfil</a>
+        <a href="/static/graphql-lab.html">GraphQL Lab</a>
+      </nav>
+      <button class="ghost-button" data-action="logout">Sair</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading">
+        <div>
+          <p class="eyebrow">Área pessoal</p>
+          <h1>Olá, <span data-user-name>cliente</span></h1>
+          <p class="muted" data-user-email></p>
+        </div>
+        <a class="primary-link" href="/static/orders.html">Ver encomendas</a>
+      </section>
+
+      <section class="stats-grid" aria-label="Resumo da conta">
+        <article class="stat-card">
+          <span>Total de encomendas</span>
+          <strong id="stat-orders">0</strong>
+        </article>
+        <article class="stat-card accent-green">
+          <span>Valor acumulado</span>
+          <strong id="stat-total">0,00 €</strong>
+        </article>
+        <article class="stat-card accent-red">
+          <span>Em curso</span>
+          <strong id="stat-active">0</strong>
+        </article>
+      </section>
+
+      <section class="content-section">
+        <div class="section-title">
+          <h2>Encomendas recentes</h2>
+          <a href="/static/orders.html">Abrir lista</a>
+        </div>
+        <div id="recent-orders" class="order-grid"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,1 @@
+"""InsecureShop demo application."""

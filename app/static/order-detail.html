@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InsecureShop | Detalhe</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body data-page="order-detail">
+    <header class="topbar">
+      <a class="brand" href="/static/dashboard.html">InsecureShop</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="/static/dashboard.html">Dashboard</a>
+        <a class="active" href="/static/orders.html">Encomendas</a>
+        <a href="/static/profile.html">Perfil</a>
+        <a href="/static/graphql-lab.html">GraphQL Lab</a>
+      </nav>
+      <button class="ghost-button" data-action="logout">Sair</button>
+    </header>
+
+    <main class="page-shell">
+      <section class="page-heading compact">
+        <div>
+          <p class="eyebrow">Encomenda</p>
+          <h1 id="order-title">Detalhe da encomenda</h1>
+          <p class="muted">Informação de compra e entrega.</p>
+        </div>
+        <a class="secondary-link" href="/static/orders.html">Voltar</a>
+      </section>
+
+      <section id="order-detail" class="detail-layout"></section>
+      <p id="order-detail-error" class="form-message error"></p>
+    </main>
+  </body>
+</html>
